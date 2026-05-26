@@ -1,5 +1,7 @@
 import 'dart:developer';
 
+import 'package:pauseguitare/screens/user_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pauseguitare/theme/app_colors.dart';
@@ -30,7 +32,10 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
           ),
           child: IconButton(
             onPressed: () {
-              inspect('clic');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const UserScreen()),
+              );
             },
             icon: Icon(Icons.person, color: Colors.white),
           ),
